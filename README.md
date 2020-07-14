@@ -1,7 +1,9 @@
 # SFM-Processing
 
 This is a workflow to adjust SfM point clouds to match reference data. In this case, the reference data is a snow-off sfm point cloud, and
-it is run for a sparsely forested domain about 1 ha in size. 
+it is run for a sparsely forested domain about 1 ha in size.
+
+Note that data files can be downloaded from https://climate.arizona.edu/data/SfM/SfM%20Processing.zip
 
 To demonstrate the effectiviness of this workflow, these point clouds are generated only using direct georeferencing information 
 from the geotagged photos from which they are made (i.e. no GCPs).  These point clouds were made in Agisoft Metashape software, and 
