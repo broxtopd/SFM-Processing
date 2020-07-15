@@ -39,5 +39,5 @@ using a low-order polynomial fit remove general distortion in the SfM point clou
 order polynomial correction to the point clouds.  Then (step 5), remove any warping of the SfM data by applying a second order polynomial correction
 to the point clouds.  If dealing with snow, this script needs to have a first guess snow depth map because it effectively clamps the 
 SfM model to the reference model ground cloud (plus the first guess difference map).  In this case, this first guess map is generated from field sampling 
-of snow depth and prior lidar data at this site
+of snow depth and prior lidar data at this site.
 
