@@ -13,7 +13,7 @@ programs (https://gdal.org/download.html) to be installed and also on the system
 listed in the scripts, themselves, but most likely, the R LidR library, as well as the python gdal and possibly numpy libraries will need to 
 be installed (e.g. using 'install.packages("LidR")' and 'pip install gdal').
 
-Workflow:
+# Workflow:
 
 There are 5 steps included in this workflow (see the batch file for the syntax needed to execute the scripts used to run
 the workflow, though detailed usage information for each script is included in the scripts, themselves).  
@@ -42,9 +42,3 @@ order polynomial correction to the point clouds.  Then (step 5), remove gentle w
 to the point clouds.  If dealing with snow, this script needs to have a first guess snow depth map because it is effectively clamping the 
 SfM model to the reference model ground cloud (plus the first guess difference map).
 
-To run these scripts, python and R should be installed (and accessable from the command line - e.g. on the system path if the provided 
-batch files are to run properly).  Additionally, they require the US forest service's FUSION software
-(http://forsys.cfr.washington.edu/fusion/fusionlatest.html), CloudCompare software (http://www.danielgm.net/cc/release/) and the GDAL utility
-programs (https://gdal.org/download.html) to be installed and also on the system path.  Other dependencies in the python and R scripts are 
-listed in the scripts, themselves, but most likely, the R LidR library, as well as the python gdal and possibly numpy libraries will need to 
-be installed (e.g. using 'install.packages("LidR")' and 'pip install gdal').
