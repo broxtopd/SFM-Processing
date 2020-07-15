@@ -38,7 +38,7 @@ is bad.
 
 The fourth and fifth steps are to correct for remaining tilt and potentially gentle warping in the SfM model (using the 'dewarp_model.py' script) 
 using a low-order polynomial fit remove general distortion in the SfM point cloud.  First (step 4), remove tilting by applying a first 
-order polynomial correction to the point clouds.  Then (step 5), remove gentle warping by applying a second order polynomial correction
-to the point clouds.  If dealing with snow, this script needs to have a first guess snow depth map because it is effectively clamping the 
+order polynomial correction to the point clouds.  Then (step 5), remove any warping of the SfM data by applying a second order polynomial correction
+to the point clouds.  If dealing with snow, this script needs to have a first guess snow depth map because it effectively clamps the 
 SfM model to the reference model ground cloud (plus the first guess difference map).
 
