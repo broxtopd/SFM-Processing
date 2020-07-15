@@ -19,11 +19,9 @@ There are 5 steps included in this workflow (see the batch file for the syntax n
 the workflow, though detailed usage information for each script is included in the scripts, themselves).  
 
 To demonstrate the effectiviness of this workflow, these point clouds are generated only using direct georeferencing information 
-from the geotagged photos from which they are made (i.e. no GCPs).  These point clouds were made in Agisoft Metashape software, and 
-they have been pre-separated (using Metashape's built-in ground filtering), and thinned to reduce data size (using CloudCompare). 
-
-For the snow-on point cloud, a first-guess snow depth field (which in this case, is generated from field sampling and prior lidar 
-data at this site) needs to be used (which will added it to the snow-free reference data during the comparison).
+from the geotagged photos from which they are made (i.e. no GCPs), and thus have large vertical errors.  These point clouds were 
+made in Agisoft Metashape software, and they have been pre-separated (using Metashape's built-in ground filtering), and thinned 
+to reduce data size (using CloudCompare). 
 
 The first step (accomplished by the CSF.R script) is to do additional ground filtering (using a Cloth Simulation Filter implemented
 in R; because Agisoft's ground filter leaves a lot of debris on the ground surface).  
@@ -34,11 +32,12 @@ reference clouds (which tend to affect point clouds not generated using GCPs) by
 The third step (accomplished by the 'ICP.py' script) is to use CloudCompare's Iterative Closest Point Algorithm to finely match the 
 SfM and reference canopy models.  This step should be successful for point clouds where the georeferencing (following the preceeding 
 step) is close (within a few meters), but there might need to be some manual adjustment before running this step if the georeferencing 
-is bad.  
+is particularly bad.  
 
 The fourth and fifth steps are to correct for remaining tilt and potentially gentle warping in the SfM model (using the 'dewarp_model.py' script) 
 using a low-order polynomial fit remove general distortion in the SfM point cloud.  First (step 4), remove tilting by applying a first 
 order polynomial correction to the point clouds.  Then (step 5), remove any warping of the SfM data by applying a second order polynomial correction
 to the point clouds.  If dealing with snow, this script needs to have a first guess snow depth map because it effectively clamps the 
-SfM model to the reference model ground cloud (plus the first guess difference map).
+SfM model to the reference model ground cloud (plus the first guess difference map).  In this case, this first guess map is generated from field sampling 
+of snow depth and prior lidar data at this site
 
