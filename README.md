@@ -36,8 +36,8 @@ SfM and reference canopy models.  This step should be successful for point cloud
 step) is close (within a few meters), but there might need to be some manual adjustment before running this step if the georeferencing 
 is bad.  
 
-The fourth and fifth steps are to correct for remaining tilt and potentially gentle warping in the SfM model (using the 'ICP.py' script) 
-using a low-order  polynomial fit remove general distortion in the SfM point cloud.  First (step 4), remove tilting by applying a first 
+The fourth and fifth steps are to correct for remaining tilt and potentially gentle warping in the SfM model (using the 'dewarp_model.py' script) 
+using a low-order polynomial fit remove general distortion in the SfM point cloud.  First (step 4), remove tilting by applying a first 
 order polynomial correction to the point clouds.  Then (step 5), remove gentle warping by applying a second order polynomial correction
 to the point clouds.  If dealing with snow, this script needs to have a first guess snow depth map because it is effectively clamping the 
 SfM model to the reference model ground cloud (plus the first guess difference map).
