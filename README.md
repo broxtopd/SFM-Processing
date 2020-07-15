@@ -13,7 +13,7 @@ programs (https://gdal.org/download.html) to be installed and also on the system
 listed in the scripts, themselves, but most likely, the R LidR library, as well as the python gdal and possibly numpy libraries will need to 
 be installed (e.g. using 'install.packages("LidR")' and 'pip install gdal').
 
-# Workflow:
+## Workflow:
 
 There are 5 steps included in this workflow (see the batch file for the syntax needed to execute the scripts used to run
 the workflow, though detailed usage information for each script is included in the scripts, themselves).  
